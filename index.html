@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradingView Ticker Tape</title>
+    <style>
+        /* Reset margins and hide scrollbars for a clean Notion embed */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: transparent; 
+        }
+        
+        /* Ensure the container takes up the full width */
+        .widget-container {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="widget-container">
+        <script type="module" src="https://widgets.tradingview-widget.com/w/en/tv-ticker-tape.js"></script>
+        <tv-ticker-tape symbols="FOREXCOM:SPXUSD,FOREXCOM:NSXUSD,FOREXCOM:DJI,CMCMARKETS:GOLD,NYSE:TSM,NASDAQ:GOOG"></tv-ticker-tape>
+    </div>
+</body>
+</html>
