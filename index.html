@@ -5,29 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.7">
     <title>TradingView Ticker Tape</title>
     <style>
-       /* Reset margins and hide scrollbars for a clean Notion embed */
+     /* Reset margins and hide scrollbars */
         html, body {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevents scrollbars from appearing */
+            overflow: hidden;
             background-color: transparent;
-            height: 100vh; /* Locks the body to exactly the height of the Notion block */
         }
         
-        /* The container that will do the cropping */
+        /* Container locked to the visible ticker height */
         .widget-container {
-            width: 100%;
-            height: 100vh; 
-            overflow: hidden; /* This is the key: it acts as a mask, cutting off anything outside it */
+            width: 100%;  /* Keeps it auto-fitting the Notion page width */
+            height: 44px; /* Locks the visible height to just the ticker tape itself */
+            overflow: hidden; 
         }
         
         /* The widget itself */
         tv-market-summary {
             display: block;
             width: 100%;
-            /* Make the widget taller than the container to push the footer out of frame */
-            /* You may need to tweak the '40px' depending on the exact size of the TradingView footer */
-            height: calc(100vh + 40px); 
+            /* Total height needs to be the tape height + the footer height we want to hide */
+            height: 84px; 
         }
     </style>
 </head>
