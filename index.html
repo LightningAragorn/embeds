@@ -4,30 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.7">
     <title>TradingView Ticker Tape</title>
-    <style>
-     /* Reset margins and hide scrollbars */
-        html, body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: transparent;
-        }
-        
-        /* Container locked to the visible ticker height */
-        .widget-container {
-            width: 100%;  /* Keeps it auto-fitting the Notion page width */
-            height: 44px; /* Locks the visible height to just the ticker tape itself */
-            overflow: hidden; 
-        }
-        
-        /* The widget itself */
-        tv-market-summary {
-            display: block;
-            width: 100%;
-            /* Total height needs to be the tape height + the footer height we want to hide */
-            height: 84px; 
-        }
-    </style>
+   <style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+</style>
 </head>
 <body>
     <div class="widget-container">
